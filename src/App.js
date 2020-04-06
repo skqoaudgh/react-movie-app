@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   getMoives = async () => {
-    const movies = await axios.get('http://yts-proxy.now.sh/list_movies.json?sort_by=rating');
+    const movies = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating');
     this.setState({movies: movies.data.data.movies, isLoading: false});
   }
 
