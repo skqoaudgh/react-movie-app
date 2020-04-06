@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Movie } from './Movie';
+import './App.css';
 
 class App extends Component {
 
@@ -24,7 +25,7 @@ class App extends Component {
       <section className="container">
         {isLoading ?
         <div className="loader">
-          <span className="loader__text">
+          <span className="loader_text">
             Loading...
           </span>
         </div> :
@@ -36,7 +37,8 @@ class App extends Component {
               year={movie.year}
               title={movie.title}
               summary={movie.summary} 
-              poster={movie.medium_cover_image} 
+              poster={movie.medium_cover_image}
+              genres={movie.genres}
             />
           ))}
         </div>}
